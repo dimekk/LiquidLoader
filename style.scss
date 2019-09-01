@@ -14,18 +14,18 @@ body {
         margin: 300px auto;
         overflow: hidden;
 
-        .drop {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background-color: transparent;
-            border-radius: 50%;
-            border-top-right-radius: 0;
-            transform: rotate(-45deg);
-            margin-top: 50px;
-            border: 5px solid $bgColor;
-            box-shadow: 0 0 0 6px $dropColor;
-            overflow: hidden;
+                                                                        .drop {
+                                                                            position: absolute;
+                                                                            width: 200px;
+                                                                            height: 200px;
+                                                                            background-color: transparent;
+                                                                            border-radius: 50%;
+                                                                            border-top-right-radius: 0;
+                                                                            transform: rotate(-45deg);
+                                                                            margin-top: 50px;
+                                                                            border: 5px solid $bgColor;
+                                                                            box-shadow: 0 0 0 6px $dropColor;
+                                                                            overflow: hidden;
 
             .wave {
                 position: relative;
@@ -45,7 +45,7 @@ body {
                     top: 0;                    
                     left: 50%;
                     transform: translate(-50%, -75%);
-                    background: #000;
+                    background: rgba(45, 45, 45, .5);
                 }
                 &:before {
                     border-radius: 45%;
