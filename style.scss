@@ -1,0 +1,88 @@
+$dropColor: #4973ff;
+$bgColor: rgb(45, 45, 45);
+body {
+    background-color: $bgColor;
+    margin: 0;
+    padding: 0;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 300px;
+        margin: 300px auto;        
+        overflow: hidden;
+
+        .drop {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background-color: none;
+            border-radius: 50%;
+            border-top-right-radius: 0;
+            transform: rotate(-45deg);
+            float: left;
+            margin-top: 50px;
+            margin-left: 20px;
+            border: 5px solid  $bgColor;
+            box-shadow: 0 0 0 6px $dropColor;            
+            overflow: hidden;
+
+            .wave {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                background: $dropColor;
+                transform: rotate(45deg);
+                border-radius: 50%;
+                box-shadow: inset 0 0 50px $bgColor; 
+                &:before,
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 200%;
+                    height: 200%;
+                    top: 0;                    
+                    left: 50%;
+                    transform: translate(-50%, -75%);
+                    background: #000;
+                }
+                &:before {
+                    border-radius: 45%;
+                    background: $bgColor;
+                    animation: wave 8s linear infinite;
+                }
+                &:after {
+                    border-radius: 40%;
+                    background: rgba(45, 45, 45, .5); 
+                    animation: wave 8s linear infinite;
+                }                
+            }
+            
+        }
+    }
+    @keyframes wave {
+        0% {
+            transform: translate(-50%, -75%) rotate(0deg);
+            top: 100px;
+        }
+        80% {
+            top: -80px;
+        }
+        85% {
+            top: -80px;
+        }
+        90% {
+            top: -80px;
+        }
+        95% {
+            top: -80px;
+        }
+        100% {
+            transform: translate(-50%, -75%) rotate(360deg);
+            top: -80px;
+        }
+    }
+    
+
+}
